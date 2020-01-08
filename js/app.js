@@ -8,8 +8,6 @@ let newsApiHealth = 'medical-news-today';
 let newsApiAll = newsApiGeneral + newsApiBusiness + newsApiTechnology + newsApiEntertainment + newsApiHealth;
 let source = newsApiAll;
 let selectedSection;
-let newsApikey =  'e7c27081cd0748348581645c8a953c94';
-let guardianApikey = '3913da98-56d9-45a0-90f7-5366bdca8593';
 
 function optionPadding() {
      $('.dropdown-list').children().css({'padding-top': '7px', 'padding-bottom': '7px'});
@@ -178,7 +176,7 @@ function pageLoadApi() {
 //newsApi get data
 function newsApiGet() {
      let newsApiSource = 'sources=' + source;
-     newsApikey = config.newsApikey;
+     let newsApikey =  'e7c27081cd0748348581645c8a953c94';
      let apiKey = 'apiKey=' + newsApikey + '&';
      let pageSize = 'pageSize=10&';
      let pageCall = 'page=' + page + '&';
@@ -239,7 +237,7 @@ function jsonDataAppend(jsonData){
 
 //fetches Guardian data
 function guardianGet() {
-     guardianApikey = '3913da98-56d9-45a0-90f7-5366bdca8593';
+     let guardianApikey = '3913da98-56d9-45a0-90f7-5366bdca8593';
      let guardianSection = 'section=' + section + '&';
      let apiKey = 'api-key=' + guardianApikey + '&';
      let pageSize = 'page-size=10&';
