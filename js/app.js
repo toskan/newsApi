@@ -8,8 +8,8 @@ let newsApiHealth = 'medical-news-today';
 let newsApiAll = newsApiGeneral + newsApiBusiness + newsApiTechnology + newsApiEntertainment + newsApiHealth;
 let source = newsApiAll;
 let selectedSection;
-let newsApikey = config.newsApikey;
-let guardianApikey = config.guardianApikey;
+let newsApikey =  'e7c27081cd0748348581645c8a953c94';
+let guardianApikey = '3913da98-56d9-45a0-90f7-5366bdca8593';
 
 function optionPadding() {
      $('.dropdown-list').children().css({'padding-top': '7px', 'padding-bottom': '7px'});
