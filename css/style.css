@@ -1,0 +1,267 @@
+/*
+Project Name: NewsApi
+Author: Tamar Oskanian
+Developer: tamar.oskanian@gmail.com in NYC
+*/
+
+* {
+     -moz-box-sizing: border-box; 
+     -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+     margin: 0;
+}
+body {
+     background-color: #E5E5E5;
+     font-family: 'Muli', sans-serif;
+}
+.header-div-h1 {
+     border-bottom: 180px solid #C40001;
+     border-left: 150px solid transparent;
+     border-right: 150px solid transparent;
+     height: 0;
+     width: 700px;
+     margin: auto;
+}
+.header-div-h1 h1 {
+     letter-spacing: normal;
+     color: #E5E5E5;
+     font-weight: 500;
+     font-size: 8em;
+     text-align: center;
+     animation-name: h1-effect;
+     animation-duration: 4s;
+     animation-timing-function: linear;
+}
+@keyframes h1-effect {
+     0% {
+          letter-spacing: 10px;
+          opacity: 0.5;
+     }
+     50% {
+          letter-spacing: normal;
+          opacity: 0.8;
+     }
+     60% {
+          letter-spacing: -3px;
+     }
+     75% {
+          letter-spacing: -10px;
+     }
+     100% {
+          letter-spacing: -20px;
+          opacity: 1;
+     }
+}
+.header-buttons-div {
+     display: flex;
+     padding: 2.2em 0 1.8em 2em;
+     font-size: 1.15em;
+}
+.states-div {
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     
+}
+.search-div {
+     width: 245px;
+     height: 50px;
+     border: 2px solid #231EC0;
+     border-bottom:  0;
+} 
+.countries-div {
+     width: 245px;
+     height: 50px;
+     border: 2px solid #231EC0;
+     border-top:  0;
+     background-color: #F1C200;
+     color: #231EC0;
+} 
+.states-div .search-h2 {
+     color: rgba(35,30,192, 0.6);
+     padding: 0.15em;
+}
+.search-div:hover, .search-h2:hover {
+     color: #E5E5E5;
+     background: rgba(35,30,192);
+     cursor: default;
+}
+.states-div .countries-h2 {
+     padding: 0.15em;
+}
+.countries-div:hover {
+     color: #E5E5E5;
+     background-color: #231EC0;
+     cursor: default;
+}
+.states-div .countries-h2::before {
+     content: '\25BC' ' ';
+}
+.states-div .countries-h2::after {
+     content: ' ' '\25BC';
+}
+.states-div .countries-h2.toggle::before {
+     content: '\25B2' ' ';
+}
+.states-div .countries-h2.toggle::after {
+     content: ' ' '\25B2';
+}
+/* .search-div {
+     display: flex;
+     flex-direction: column;
+     flex-grow: 0.8;
+} */
+.dropdown-div {
+     position: relative;
+     color: #E5E5E5;
+}
+.dropdown-list {
+     list-style: none;
+     z-index: 999;
+     position: absolute;
+     width: 116.5%;
+     height: 100%;
+     margin-left: -40px;
+}
+.dropdown-list-item {
+     /* opacity: 0; */
+     background-color: #E5E5E5;
+     color: #231EC0;
+     animation-fill-mode: both;
+     border: 2px solid #231EC0;
+     border-top: 0;
+}
+.dropdown-list-item.display {
+     display: none;
+}
+.dropdown-list-item:hover {
+     background-color: #231EC0;
+     color: #E5E5E5;
+     cursor: default;
+}
+.dropdown-list.animation:nth-child(1) {  animation-delay: .005s;  }
+.dropdown-list.animation:nth-child(2) {  animation-delay: .01s; }
+.dropdown-list.animation:nth-child(3) {  animation-delay: .015s;  }
+.dropdown-list.animation:nth-child(4) {  animation-delay: .02s;  }
+.dropdown-list.animation:nth-child(5) {  animation-delay: .025s; }
+.dropdown-list.animation:nth-child(6) {  animation-delay: .03s;}
+.dropdown-list.animation:nth-child(7) { animation-delay: .035s; }
+.dropdown-list.animation:nth-child(8) { animation-delay: .04s; }
+.dropdown-list.animation:nth-child(9) { animation-delay: .045s; }
+.dropdown-class {
+     animation: country-dropdown 1s ease-in;
+}
+@keyframes country-dropdown {
+     0% {
+          opacity: 0;
+     }
+     1% {
+          opacity: 1;
+     }
+     100% {
+          opacity: 1;
+     }
+}
+/* #search-div-h3 {
+     color: #231EC0;
+     margin-top: 10px;
+     margin-left: 8px;
+}
+.search-input {
+     font-size: 1em;
+     height: 13%;
+     width: 20%;
+     background-color: #E5E5E5;
+     border: none;
+     color: #231EC0;
+}
+.search-input:focus {
+     background-color: #E5E5E5;
+     border: 2px solid #231EC0;
+     border-left: none;
+     outline: none;
+} */
+/* .switch {
+     display: flex;
+     flex-direction: column;
+     padding-top: 0.5em;
+} */
+.title-divs {
+     margin-left: 22%;
+     width: 100%;
+     display: flex;
+     transition: all .1s ease-in-out; 
+     transition-delay: 0.2s;
+     z-index: -1;
+}
+.title-divs:hover {
+     transform: scale(1.06, 1.03); 
+} 
+.title-content-div {
+     width: 50%;
+     margin-bottom: 1.7em;
+     font-size: 1.1em;
+     font-family: 'Roboto Condensed', sans-serif;
+     word-spacing: 2px;
+     border-bottom: 3px solid black;
+}
+.title-content-div p {
+     margin: 0 0 1.7em .4em;
+     text-indent: 10%;
+     line-height: 130%;
+}
+.title-divs h3 {
+     padding: 0.2em 0 1.3em 0;
+     font-weight: 500;
+     font-size: 1.3em;
+     margin-left: .4em;
+     
+}
+#title-list-item-0 {
+     padding-top: 1.2em;
+}
+.arrow-read-more-div {
+     width: 20%;
+     display: flex;
+     align-items: flex-end;
+}
+.read-more-li {
+     font-size: 0.7em;
+     font-weight: 600;
+     position: relative;
+     right: 30px;
+     top: 17px;
+     line-height: 90%;
+}
+.read-more-div {
+     margin: 1em 1em 0 1em;
+     height: 53px;
+     width: 53px;
+     display: block;
+     text-align: center;
+     border-radius: 50%;
+     background-color: #C40001;
+     margin-bottom: 8px;
+}
+.read-more-div:hover, .read-more-a:hover {
+     color: black;
+     cursor: pointer;
+}
+.read-more-ul {
+     list-style: none;
+}
+.read-more-a {
+     text-decoration: none;
+     outline: none;
+     color: #E5E5E5;
+}
+
+/* .arrow1 {
+     width: 0;
+     height: 0;
+     border-top: 15px solid transparent;
+     border-bottom: 15px solid transparent;    
+     margin-left: 25px;
+     margin-bottom: 15px;
+     border-right: 30px solid rgba(241, 194, 0, 1);
+} */
